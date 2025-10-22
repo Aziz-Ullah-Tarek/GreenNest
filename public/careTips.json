@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Watering Wisdom",
+    "icon": "💧",
+    "shortDescription": "Learn the art of proper watering",
+    "tips": [
+      "Check soil moisture before watering - stick your finger 2 inches deep",
+      "Water thoroughly until it drains from the bottom",
+      "Most plants prefer being slightly dry rather than overwatered",
+      "Use room temperature water to avoid shocking the roots",
+      "Water in the morning so leaves can dry during the day"
+    ],
+    "commonMistakes": [
+      "Watering on a strict schedule instead of checking soil",
+      "Using cold water directly from the tap",
+      "Letting plants sit in standing water"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Sunlight Secrets",
+    "icon": "☀️",
+    "shortDescription": "Understanding your plant's light needs",
+    "tips": [
+      "Bright indirect light means near a window with sheer curtains",
+      "Low light areas are 6+ feet from windows",
+      "Rotate plants weekly for even growth",
+      "South-facing windows get the most light",
+      "Watch for signs: pale leaves mean too little light, brown spots mean too much"
+    ],
+    "commonMistakes": [
+      "Placing all plants in direct sunlight",
+      "Forgetting to rotate plants",
+      "Ignoring seasonal light changes"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Fertilizing Fundamentals",
+    "icon": "🌱",
+    "shortDescription": "Feeding your plants for optimal growth",
+    "tips": [
+      "Feed during growing season (spring and summer)",
+      "Dilute liquid fertilizer to half strength for sensitive plants",
+      "Less is more - over-fertilizing causes more harm than good",
+      "Use organic fertilizers for healthier, sustainable growth",
+      "Stop or reduce feeding in fall and winter"
+    ],
+    "commonMistakes": [
+      "Fertilizing year-round without breaks",
+      "Using too much fertilizer",
+      "Fertilizing dry soil (water first!)"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Humidity Hacks",
+    "icon": "💨",
+    "shortDescription": "Creating the perfect environment",
+    "tips": [
+      "Group plants together to create a humid microclimate",
+      "Use a pebble tray filled with water under pots",
+      "Mist tropical plants 2-3 times per week",
+      "Keep plants away from heating vents and AC",
+      "Consider a humidifier for tropical plant collections"
+    ],
+    "commonMistakes": [
+      "Misting in the evening (promotes fungus)",
+      "Over-misting succulents and cacti",
+      "Placing plants near drafty areas"
+    ]
+  }
+]

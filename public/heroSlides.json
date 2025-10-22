@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "Breathe Life Into Your Home",
+    "subtitle": "Discover the perfect plants for every corner of your space",
+    "image": "https://images.unsplash.com/photo-1463320726281-696a485928c7?w=1200&q=80",
+    "buttonText": "Explore Collection",
+    "buttonLink": "/plants"
+  },
+  {
+    "id": 2,
+    "title": "Expert Care, Guaranteed Growth",
+    "subtitle": "Get personalized advice from our certified plant specialists",
+    "image": "https://images.unsplash.com/photo-1466781783364-36c955e42a7f?w=1200&q=80",
+    "buttonText": "Meet Our Experts",
+    "buttonLink": "/experts"
+  },
+  {
+    "id": 3,
+    "title": "Fresh Air, Better Living",
+    "subtitle": "Transform your home with nature's air purifiers",
+    "image": "https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?w=1200&q=80",
+    "buttonText": "Shop Now",
+    "buttonLink": "/plants"
+  },
+  {
+    "id": 4,
+    "title": "Plant Parent Community",
+    "subtitle": "Join thousands of happy plant lovers growing together",
+    "image": "https://images.unsplash.com/photo-1470058869958-2a77ade41c02?w=1200&q=80",
+    "buttonText": "Join Today",
+    "buttonLink": "/register"
+  }
+]

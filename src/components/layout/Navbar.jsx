@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
-    
+    // Simulate user state - will be replaced with Firebase auth later
     const [user, setUser] = useState(null); 
-   
+    // Example: const [user, setUser] = useState({ displayName: 'John Doe', photoURL: 'url' });
+    
+    // TEMPORARY: Test function to toggle user state (remove this when Firebase is implemented)
     const toggleUserTest = () => {
         if (user) {
             setUser(null);
@@ -17,7 +19,7 @@ const Navbar = () => {
     };
 
     const handleLogout = () => {
-       
+        // Firebase logout will be implemented here
         setUser(null);
     };
 
