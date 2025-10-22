@@ -7,7 +7,7 @@ const PlantCareTips = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        // Fetch care tips data from public folder
+        
         fetch('/careTips.json')
             .then(response => response.json())
             .then(data => {
@@ -107,7 +107,7 @@ const PlantCareTips = () => {
                                         </ul>
                                     </div>
 
-                                    {/* Common Mistakes */}
+                                    
                                     <div className="bg-white/60 rounded-xl p-5">
                                         <h4 className="text-xl font-semibold text-red-600 mb-3 flex items-center gap-2">
                                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

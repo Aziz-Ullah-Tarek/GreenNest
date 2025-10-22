@@ -61,7 +61,7 @@ const Navbar = () => {
     );
 
     return (
-        <nav className="navbar bg-base-100 shadow-md px-4 lg:px-8 sticky top-0 z-50">
+        <nav className="navbar bg-gradient-to-r from-green-300 to-green-100 shadow-md px-4 lg:px-8 sticky top-0 z-50">
             {/* Navbar Start - Mobile Dropdown + Logo */}
             <div className="navbar-start">
                 {/* Mobile Dropdown Menu */}
