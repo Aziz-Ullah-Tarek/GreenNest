@@ -1,26 +1,19 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../../contexts/AuthContext';
+import { toast } from 'react-toastify';
 
 const Navbar = () => {
-    // Simulate user state - will be replaced with Firebase auth later
-    const [user, setUser] = useState(null); 
-    // Example: const [user, setUser] = useState({ displayName: 'John Doe', photoURL: 'url' });
-    
-    // TEMPORARY: Test function to toggle user state (remove this when Firebase is implemented)
-    const toggleUserTest = () => {
-        if (user) {
-            setUser(null);
-        } else {
-            setUser({
-                displayName: 'Test User',
-                photoURL: 'https://ui-avatars.com/api/?name=Test+User&background=22c55e&color=fff'
-            });
-        }
-    };
+    const { user, logOut } = useContext(AuthContext);
 
     const handleLogout = () => {
-        // Firebase logout will be implemented here
-        setUser(null);
+        logOut()
+            .then(() => {
+                toast.success('Logged out successfully!');
+            })
+            .catch(error => {
+                toast.error('Error logging out: ' + error.message);
+            });
     };
 
     const navLinks = (
@@ -61,7 +54,7 @@ const Navbar = () => {
     );
 
     return (
-        <nav className="navbar bg-gradient-to-r from-green-300 to-green-100 shadow-md px-4 lg:px-8 sticky top-0 z-50">
+        <nav className="navbar bg-linear-to-r from-green-300 to-green-100 shadow-md px-4 lg:px-8 sticky top-0 z-50">
             {/* Navbar Start - Mobile Dropdown + Logo */}
             <div className="navbar-start">
                 {/* Mobile Dropdown Menu */}
@@ -96,26 +89,17 @@ const Navbar = () => {
                 </Link>
             </div>
 
-            {/* Navbar Center - Desktop Menu */}
+           
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-2">
                     {navLinks}
                 </ul>
             </div>
 
-            {/* Navbar End - Auth Buttons or User Dropdown */}
+            
             <div className="navbar-end gap-2">
-                {/* TEMPORARY TEST BUTTON - Remove when Firebase is implemented */}
-                <button 
-                    onClick={toggleUserTest} 
-                    className="btn btn-xs btn-outline hidden lg:flex"
-                    title="Toggle user state (test only)"
-                >
-                    Test Auth
-                </button>
-                
                 {user ? (
-                    // User is logged in - Show Avatar Dropdown
+                    
                     <div className="dropdown dropdown-end">
                         <div 
                             tabIndex={0} 
