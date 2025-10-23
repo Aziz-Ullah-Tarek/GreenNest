@@ -29,14 +29,14 @@ const HeroSection = () => {
 
     if (loading) {
         return (
-            <section className="relative w-full h-[600px] lg:h-[700px] overflow-hidden flex items-center justify-center bg-green-50">
+            <section className="relative w-full h-[400px] lg:h-[500px] overflow-hidden flex items-center justify-center bg-gradient-to-br from-green-50 to-blue-50">
                 <span className="loading loading-spinner loading-lg text-green-600"></span>
             </section>
         );
     }
 
     return (
-        <section className="relative w-full h-[600px] lg:h-[700px] overflow-hidden">
+        <section className="relative w-full h-[400px] lg:h-[500px] overflow-hidden">
             <Swiper
                 modules={[Navigation, Pagination, Autoplay, EffectFade]}
                 effect="fade"
@@ -64,22 +64,22 @@ const HeroSection = () => {
 
                             {/* Content */}
                             <div className="relative h-full flex items-center justify-center text-center px-4">
-                                <div className="max-w-4xl animate-fade-in">
-                                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 md:mb-6">
+                                <div className="max-w-4xl">
+                                    <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-3 md:mb-5 drop-shadow-lg">
                                         {slide.title}
                                     </h1>
                                     
-                                    <p className="text-lg md:text-2xl text-white/90 mb-6 md:mb-8">
+                                    <p className="text-base md:text-xl text-white/95 mb-5 md:mb-7 drop-shadow-md">
                                         {slide.subtitle}
                                     </p>
                                     
                                     <div>
                                         <Link 
                                             to={slide.buttonLink}
-                                            className="btn btn-lg bg-green-600 hover:bg-green-700 text-white border-none shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+                                            className="btn btn-lg bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white border-none shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105"
                                         >
                                             {slide.buttonText}
-                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                             </svg>
                                         </Link>

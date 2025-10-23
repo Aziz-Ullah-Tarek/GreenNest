@@ -54,7 +54,7 @@ const Navbar = () => {
     );
 
     return (
-        <nav className="navbar bg-linear-to-r from-green-300 to-green-100 shadow-md px-4 lg:px-8 sticky top-0 z-50">
+        <nav className="navbar bg-gradient-to-r from-green-300 to-blue-500 shadow-md px-4 lg:px-8 sticky top-0 z-50">
             {/* Navbar Start - Mobile Dropdown + Logo */}
             <div className="navbar-start">
                 {/* Mobile Dropdown Menu */}
@@ -144,7 +144,7 @@ const Navbar = () => {
                         </Link>
                         <Link 
                             to="/register" 
-                            className="btn btn-sm lg:btn-md bg-green-600 hover:bg-green-700 text-white border-none"
+                            className="btn btn-sm lg:btn-md bg-green-500 hover:from-green-600 hover:to-green-700 text-white border-none"
                         >
                             Register
                         </Link>
