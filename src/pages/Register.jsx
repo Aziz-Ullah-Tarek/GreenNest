@@ -7,6 +7,8 @@ import { FaGoogle, FaEye, FaEyeSlash } from 'react-icons/fa';
 const Register = () => {
     const { createUser, signInWithGoogle, updateUserProfile } = useContext(AuthContext);
     const [showPassword, setShowPassword] = useState(false);
+    const [password, setPassword] = useState('');
+    const [showPasswordError, setShowPasswordError] = useState(false);
     const navigate = useNavigate();
 
     const handleRegister = (e) => {
@@ -17,13 +19,13 @@ const Register = () => {
         const photoURL = form.photoURL.value;
         const password = form.password.value;
 
-        // Validate password with regex - no toast, form will not submit if invalid
+        
         const hasUpperCase = /[A-Z]/.test(password);
         const hasLowerCase = /[a-z]/.test(password);
         const hasMinLength = password.length >= 6;
 
         if (!hasUpperCase || !hasLowerCase || !hasMinLength) {
-            // Don't show toast, the text below password field guides the user
+           
             return;
         }
 
@@ -133,20 +135,35 @@ const Register = () => {
                                         type={showPassword ? "text" : "password"}
                                         name="password"
                                         placeholder="Create a password"
-                                        className="input input-bordered w-full focus:outline-green-500 pr-16"
-                                        required 
+                                        className="input input-bordered w-full focus:outline-green-500 pr-12"
+                                        required
+                                        value={password}
+                                        onChange={(e) => {
+                                            const value = e.target.value;
+                                            setPassword(value);
+                                            
+                                            // Validate password
+                                            const hasUpperCase = /[A-Z]/.test(value);
+                                            const hasLowerCase = /[a-z]/.test(value);
+                                            const hasMinLength = value.length >= 6;
+                                            
+                                            // Show error only if password is invalid
+                                            setShowPasswordError(value.length > 0 && (!hasUpperCase || !hasLowerCase || !hasMinLength));
+                                        }}
                                     />
                                     <button
                                         type="button"
                                         onClick={() => setShowPassword(!showPassword)}
-                                        className="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-green-600 hover:text-green-700 font-medium"
+                                        className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-600 hover:text-green-600"
                                     >
-                                        {showPassword ? "Hide" : "Show"}
+                                        {showPassword ? <FaEyeSlash size={20} /> : <FaEye size={20} />}
                                     </button>
                                 </div>
-                                <p className="mt-2 text-xs text-gray-500">
-                                    Must contain at least 6 characters, one uppercase letter, and one lowercase letter
-                                </p>
+                                {showPasswordError && (
+                                    <p className="mt-2 text-xs text-red-500">
+                                        Must contain at least 6 characters, one uppercase letter, and one lowercase letter
+                                    </p>
+                                )}
                             </div>
 
                             {/* Register Button */}

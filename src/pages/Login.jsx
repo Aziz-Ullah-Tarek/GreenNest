@@ -108,15 +108,15 @@ const Login = () => {
                                         type={showPassword ? "text" : "password"}
                                         name="password"
                                         placeholder="Enter your password"
-                                        className="input input-bordered w-full focus:outline-green-500 pr-16"
+                                        className="input input-bordered w-full focus:outline-green-500 pr-12"
                                         required 
                                     />
                                     <button
                                         type="button"
                                         onClick={() => setShowPassword(!showPassword)}
-                                        className="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-green-600 hover:text-green-700 font-medium"
+                                        className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-600 hover:text-green-600"
                                     >
-                                        {showPassword ? "Hide" : "Show"}
+                                        {showPassword ? <FaEyeSlash size={20} /> : <FaEye size={20} />}
                                     </button>
                                 </div>
                             </div>
