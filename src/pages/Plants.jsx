@@ -60,7 +60,7 @@ const Plants = () => {
                 </div>
             ) : (
                 <>
-                    <div className="text-center mb-6 text-gray-600">
+                    <div className="text-center mb-6 text-green-500 font-bold text-4xl ">
                         Showing {filteredPlants.length} {filteredPlants.length === 1 ? 'plant' : 'plants'}
                     </div>
 
