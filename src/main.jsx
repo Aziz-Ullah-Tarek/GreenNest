@@ -32,7 +32,7 @@ const router = createBrowserRouter([
     },
     {
       path:"/plant/:id",
-      Component:PlantDeatils
+      element: <PrivateRoute><PlantDeatils /></PrivateRoute>
     },
     {
       path:"/profile",
