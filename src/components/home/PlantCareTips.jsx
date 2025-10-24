@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
+import Loader from '../ui/Loader';
 
 const PlantCareTips = () => {
     const [careTips, setCareTips] = useState([]);
@@ -23,10 +24,8 @@ const PlantCareTips = () => {
 
     if (loading || !selectedTip) {
         return (
-            <section className="py-16 bg-white">
-                <div className="container mx-auto px-4 flex justify-center items-center min-h-[400px]">
-                    <span className="loading loading-spinner loading-lg text-green-600"></span>
-                </div>
+            <section className="py-20 relative">
+                <Loader size="lg" />
             </section>
         );
     }

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
 import { Link } from 'react-router-dom';
+import Loader from '../ui/Loader';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -29,8 +30,8 @@ const HeroSection = () => {
 
     if (loading) {
         return (
-            <section className="relative w-full h-[400px] lg:h-[500px] overflow-hidden flex items-center justify-center bg-gradient-to-br from-green-50 to-blue-50">
-                <span className="loading loading-spinner loading-lg text-green-600"></span>
+            <section className="relative w-full h-[400px] lg:h-[500px] overflow-hidden flex items-center justify-center bg-linear-to-br from-green-50 to-blue-50">
+                <Loader size="lg" />
             </section>
         );
     }

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Loader from '../ui/Loader';
 
 const ExpertCard = ({ expert }) => {
     return (
@@ -95,9 +96,7 @@ const GreenExperts = () => {
                 </div>
 
                 {loading ? (
-                    <div className="flex justify-center items-center min-h-[400px]">
-                        <span className="loading loading-spinner loading-lg text-green-600"></span>
-                    </div>
+                    <Loader size="lg" />
                 ) : (
                     <>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">

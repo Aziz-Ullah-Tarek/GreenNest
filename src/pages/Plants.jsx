@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PlantCard from '../components/plant/PlantCard';
+import Loader from '../components/ui/Loader';
 
 const Plants = () => {
     const [plants, setPlants] = useState([]);
@@ -55,9 +56,7 @@ const Plants = () => {
             </div>
 
             {loading ? (
-                <div className="flex justify-center items-center min-h-[400px]">
-                    <span className="loading loading-spinner loading-lg text-green-600"></span>
-                </div>
+                <Loader size="lg" />
             ) : (
                 <>
                     <div className="text-center mb-6 text-green-500 font-bold text-4xl ">

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PlantCard from '../plant/PlantCard';
+import Loader from '../ui/Loader';
 
 const TopRatedPlants = () => {
     const [plants, setPlants] = useState([]);
@@ -41,9 +42,7 @@ const TopRatedPlants = () => {
                 </div>
 
                 {loading ? (
-                    <div className="flex justify-center items-center min-h-[400px]">
-                        <span className="loading loading-spinner loading-lg text-green-600"></span>
-                    </div>
+                    <Loader size="lg" />
                 ) : (
                     <>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
