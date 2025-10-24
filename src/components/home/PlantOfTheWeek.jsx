@@ -21,22 +21,33 @@ const PlantOfTheWeek = () => {
     }
 
     return (
-        <div className="py-16 bg-green-50">
-            <div className="container mx-auto px-4">
+        <div className="py-20 bg-linear-to-br from-green-50 via-yellow-50 to-green-50 relative mt-[50px]">
+            {/* Decorative circles */}
+            <div className="absolute top-10 left-10 w-32 h-32 bg-yellow-300 rounded-full filter blur-3xl opacity-30"></div>
+            <div className="absolute bottom-10 right-10 w-40 h-40 bg-green-300 rounded-full filter blur-3xl opacity-30"></div>
+            
+            <div className="container mx-auto px-4 relative z-10">
                 {/* Section Title */}
-                <div className="text-center mb-10">
-                    <h2 className="text-4xl font-bold text-green-800 mb-3 flex items-center justify-center gap-3">
-                        <FaCrown className="text-yellow-500" />
+                <div className="text-center mb-12">
+                    <div className="inline-flex items-center gap-2 bg-yellow-400 text-gray-900 px-6 py-2 rounded-full font-bold mb-4 shadow-lg">
+                        <FaCrown className="text-xl" />
+                        <span>Featured This Week</span>
+                        <FaCrown className="text-xl" />
+                    </div>
+                    <h2 className="text-5xl md:text-6xl font-bold bg-linear-to-r from-green-600 via-yellow-600 to-green-600 bg-clip-text text-transparent mb-4">
                         Plant of the Week
-                        <FaCrown className="text-yellow-500" />
                     </h2>
-                    <p className="text-gray-600 text-lg">
+                    <p className="text-gray-700 text-xl max-w-2xl mx-auto">
                         Our featured plant - specially selected for you this week!
                     </p>
                 </div>
 
                 {/* Featured Plant Card */}
-                <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border-4 border-yellow-400">
+                <div className="max-w-5xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-yellow-400 relative">
+                    {/* Sparkle effects */}
+                    <div className="absolute top-4 left-4 w-3 h-3 bg-yellow-400 rounded-full animate-ping"></div>
+                    <div className="absolute top-8 right-12 w-2 h-2 bg-yellow-500 rounded-full animate-ping" style={{animationDelay: '0.5s'}}></div>
+                    <div className="absolute bottom-12 left-16 w-2 h-2 bg-yellow-400 rounded-full animate-ping" style={{animationDelay: '1s'}}></div>
                     <div className="grid md:grid-cols-2 gap-0">
                         {/* Image Section */}
                         <div className="relative h-96 md:h-auto">

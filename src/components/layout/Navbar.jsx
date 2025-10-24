@@ -54,7 +54,7 @@ const Navbar = () => {
     );
 
     return (
-        <nav className="navbar bg-gradient-to-r from-green-300 to-blue-500 shadow-md px-4 lg:px-8 sticky top-0 z-50">
+        <nav className="navbar bg-linear-to-r from-green-300 to-blue-500 shadow-md px-4 lg:px-8 sticky top-0 z-50">
             {/* Navbar Start - Mobile Dropdown + Logo */}
             <div className="navbar-start">
                 {/* Mobile Dropdown Menu */}
@@ -154,7 +154,7 @@ const Navbar = () => {
                             className={({ isActive }) => 
                                 isActive 
                                     ? "btn btn-sm lg:btn-md bg-green-600 text-white border-none" 
-                                    : "btn btn-sm lg:btn-md bg-green-500 hover:bg-green-600 text-white border-none"
+                                    : "btn btn-sm lg:btn-md bg-green-300 hover:bg-green-600 text-white border-none"
                             }
                         >
                             Register

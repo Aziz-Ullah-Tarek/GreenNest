@@ -47,13 +47,21 @@ const ecoDecorIdeas = [
 
 const EcoDecorIdeas = () => {
     return (
-        <section className="py-16 bg-linear-to-b from-white to-green-50">
-            <div className="container mx-auto px-4">
-                <div className="text-center mb-12">
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-                        🏡 Eco Decor Ideas
+        <section className="py-20 bg-linear-to-b from-white to-green-50 relative">
+            {/* Decorative elements */}
+            <div className="absolute top-20 right-10 w-40 h-40 bg-green-200 rounded-full filter blur-3xl opacity-30"></div>
+            <div className="absolute bottom-20 left-10 w-48 h-48 bg-blue-200 rounded-full filter blur-3xl opacity-30"></div>
+            
+            <div className="container mx-auto px-4 relative z-10">
+                <div className="text-center mb-16">
+                    <div className="inline-block mb-4">
+                        <span className="text-6xl">🏡</span>
+                    </div>
+                    <h2 className="text-5xl md:text-6xl font-bold bg-linear-to-r from-green-600 to-lime-600 bg-clip-text text-transparent mb-4">
+                        Eco Decor Ideas
                     </h2>
-                    <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                    <div className="w-24 h-1 bg-linear-to-r from-green-500 to-lime-500 mx-auto mb-4 rounded-full"></div>
+                    <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                         Get inspired with creative ways to style your space with plants and bring nature indoors
                     </p>
                 </div>

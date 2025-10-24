@@ -25,13 +25,17 @@ const TopRatedPlants = () => {
     }, []);
 
     return (
-        <section className="py-16 bg-linear-to-b from-white to-green-50">
-            <div className="container mx-auto px-4">
-                <div className="text-center mb-12">
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-                        🌟 Top Rated Indoor Plants
+        <section className="py-20 bg-linear-to-b from-white via-green-50/50 to-white relative">
+            <div className="container mx-auto px-4 relative z-10">
+                <div className="text-center mb-16">
+                    <div className="inline-block mb-4">
+                        <span className="text-6xl animate-pulse">🌟</span>
+                    </div>
+                    <h2 className="text-5xl md:text-6xl font-bold bg-linear-to-r from-green-600 to-blue-600 bg-clip-text text-transparent mb-4">
+                        Top Rated Indoor Plants
                     </h2>
-                    <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                    <div className="w-24 h-1 bg-linear-to-r from-green-500 to-blue-500 mx-auto mb-4 rounded-full"></div>
+                    <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                         Handpicked favorites loved by our plant parent community
                     </p>
                 </div>
@@ -48,10 +52,10 @@ const TopRatedPlants = () => {
                             ))}
                         </div>
 
-                        <div className="text-center mt-12">
+                        <div className="text-center mt-16">
                             <Link 
                                 to="/plants"
-                                className="btn btn-lg btn-outline border-green-600 text-green-600 hover:bg-green-600 hover:text-white hover:border-green-600"
+                                className="btn btn-lg bg-linear-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white border-none shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
                             >
                                 View All Plants
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">

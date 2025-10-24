@@ -36,7 +36,7 @@ const HeroSection = () => {
     }
 
     return (
-        <section className="relative w-full h-[400px] lg:h-[500px] overflow-hidden">
+        <section className="relative w-full h-[600px] lg:h-[500px] overflow-hidden">
             <Swiper
                 modules={[Navigation, Pagination, Autoplay, EffectFade]}
                 effect="fade"
@@ -76,7 +76,7 @@ const HeroSection = () => {
                                     <div>
                                         <Link 
                                             to={slide.buttonLink}
-                                            className="btn btn-lg bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white border-none shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105"
+                                            className="btn btn-lg bg-linear-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white border-none shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105"
                                         >
                                             {slide.buttonText}
                                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
