@@ -4,7 +4,7 @@ A modern, feature-rich e-commerce web application for plant enthusiasts. Browse,
 
 ## 🔗 Links
 
-- **Live Site:** [https://greennest36.netlify.app/](https://greennest36.netlify.app/)
+- **Live Site:** [https://greennest-36.netlify.app/](https://greennest-36.netlify.app/)
 - **Private Repository:** [https://github.com/programming-hero-web-course2/b12-a9-firesheild-Aziz-Ullah-Tarek](https://github.com/programming-hero-web-course2/b12-a9-firesheild-Aziz-Ullah-Tarek)
 
 ---
