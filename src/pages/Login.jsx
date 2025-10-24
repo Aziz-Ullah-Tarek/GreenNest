@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import { FaGoogle, FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const Login = () => {
-    const { signIn, signInWithGoogle, resetPassword } = useContext(AuthContext);
+    const { signIn, signInWithGoogle } = useContext(AuthContext);
     const [showPassword, setShowPassword] = useState(false);
     const [email, setEmail] = useState('');
     const navigate = useNavigate();
@@ -47,21 +47,6 @@ const Login = () => {
             })
             .catch(error => {
                 toast.error('Google login failed: ' + error.message);
-            });
-    };
-
-    const handleForgotPassword = () => {
-        if (!email) {
-            toast.warning('Please enter your email address first!');
-            return;
-        }
-
-        resetPassword(email)
-            .then(() => {
-                toast.success('Password reset email sent! Check your inbox.');
-            })
-            .catch(error => {
-                toast.error('Failed to send reset email: ' + error.message);
             });
     };
 
@@ -121,15 +106,14 @@ const Login = () => {
                                 </div>
                             </div>
 
-                            {/* Forgot Password */}
-                            <div className="mb-4">
-                                <button 
-                                    type="button"
-                                    onClick={handleForgotPassword}
-                                    className="text-sm text-green-600 hover:underline"
+                            {/* Forgot Password Link */}
+                            <div className="text-left">
+                                <Link 
+                                    to="/forgot-password"
+                                    className="text-sm text-green-600 hover:text-green-700 hover:underline"
                                 >
                                     Forgot password?
-                                </button>
+                                </Link>
                             </div>
 
                             {/* Login Button */}

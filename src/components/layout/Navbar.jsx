@@ -139,15 +139,26 @@ const Navbar = () => {
                 ) : (
                     // User is logged out - Show Login/Register Buttons
                     <>
-                        <Link to="/login" className="btn btn-ghost btn-sm lg:btn-md">
+                        <NavLink 
+                            to="/login" 
+                            className={({ isActive }) => 
+                                isActive 
+                                    ? "btn btn-sm lg:btn-md bg-green-600 text-white border-none" 
+                                    : "btn btn-ghost btn-sm lg:btn-md"
+                            }
+                        >
                             Login
-                        </Link>
-                        <Link 
+                        </NavLink>
+                        <NavLink 
                             to="/register" 
-                            className="btn btn-sm lg:btn-md bg-green-500 hover:from-green-600 hover:to-green-700 text-white border-none"
+                            className={({ isActive }) => 
+                                isActive 
+                                    ? "btn btn-sm lg:btn-md bg-green-600 text-white border-none" 
+                                    : "btn btn-sm lg:btn-md bg-green-500 hover:bg-green-600 text-white border-none"
+                            }
                         >
                             Register
-                        </Link>
+                        </NavLink>
                     </>
                 )}
             </div>

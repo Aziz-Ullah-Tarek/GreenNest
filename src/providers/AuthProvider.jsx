@@ -43,6 +43,13 @@ const AuthProvider = ({ children }) => {
         return updateProfile(auth.currentUser, {
             displayName: name,
             photoURL: photo
+        }).then(() => {
+            // Manually update the user state to reflect changes immediately
+            setUser({
+                ...auth.currentUser,
+                displayName: name,
+                photoURL: photo
+            });
         });
     };
 

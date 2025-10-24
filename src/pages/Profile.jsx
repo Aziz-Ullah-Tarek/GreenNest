@@ -38,8 +38,8 @@ const Profile = () => {
             await updateUserProfile(formData.displayName, formData.photoURL);
             toast.success('Profile updated successfully!');
             setIsEditing(false);
-            // Refresh the page to show updated info
-            window.location.reload();
+            // Force re-render by updating local state to match new data
+            // The onAuthStateChanged listener will automatically update the user state
         } catch (error) {
             toast.error('Failed to update profile: ' + error.message);
         } finally {

@@ -5,6 +5,7 @@ import PlantCareTips from '../components/home/PlantCareTips';
 import GreenExperts from '../components/home/GreenExperts';
 import EcoDecorIdeas from '../components/home/EcoDecorIdeas';
 import PlantOfTheWeek from '../components/home/PlantOfTheWeek';
+import WhyChooseUs from '../components/home/WhyChooseUs';
 
 const Home = () => {
     return (
@@ -12,11 +13,14 @@ const Home = () => {
             {/* Hero Slider Section */}
             <HeroSection />
 
-            {/* Plant of the Week Section - NEW! */}
+            {/* Plant of the Week Section */}
             <PlantOfTheWeek />
 
             {/* Top Rated Plants Section */}
             <TopRatedPlants />
+
+            {/* Why Choose Us Section - NEW! */}
+            <WhyChooseUs />
 
             {/* Plant Care Tips Section */}
             <PlantCareTips />
