@@ -53,11 +53,10 @@ const PlantDeatils = () => {
             position: "top-center",
             autoClose: 3000
         });
-        // Reset form
-        e.target.reset();
+        // Clear form completely
         setFormData({
-            name: user?.displayName || '',
-            email: user?.email || ''
+            name: '',
+            email: ''
         });
     };
 
