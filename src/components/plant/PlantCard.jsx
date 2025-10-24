@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const PlantCard = ({ plant }) => {
     return (
         <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-            <figure className="relative h-64 overflow-hidden">
+            <figure className="relative h-80 overflow-hidden ">
                 <img 
                     src={plant.image} 
                     alt={plant.plantName}
