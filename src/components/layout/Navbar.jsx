@@ -22,7 +22,7 @@ const Navbar = () => {
                 <NavLink 
                     to="/" 
                     className={({ isActive }) => 
-                        isActive ? "text-green-600 font-semibold" : "hover:text-green-600"
+                        isActive ? "text-white font-bold bg-green-700 rounded-lg px-3 py-2" : "text-white hover:text-yellow-300 transition-colors px-3 py-2"
                     }
                 >
                     Home
@@ -32,10 +32,40 @@ const Navbar = () => {
                 <NavLink 
                     to="/plants" 
                     className={({ isActive }) => 
-                        isActive ? "text-green-600 font-semibold" : "hover:text-green-600"
+                        isActive ? "text-white font-bold bg-green-700 rounded-lg px-3 py-2" : "text-white hover:text-yellow-300 transition-colors px-3 py-2"
                     }
                 >
-                    Plants
+                    All Plants
+                </NavLink>
+            </li>
+            <li>
+                <NavLink 
+                    to="/about" 
+                    className={({ isActive }) => 
+                        isActive ? "text-white font-bold bg-green-700 rounded-lg px-3 py-2" : "text-white hover:text-yellow-300 transition-colors px-3 py-2"
+                    }
+                >
+                    About Us
+                </NavLink>
+            </li>
+            <li>
+                <NavLink 
+                    to="/contact" 
+                    className={({ isActive }) => 
+                        isActive ? "text-white font-bold bg-green-700 rounded-lg px-3 py-2" : "text-white hover:text-yellow-300 transition-colors px-3 py-2"
+                    }
+                >
+                    Contact
+                </NavLink>
+            </li>
+            <li>
+                <NavLink 
+                    to="/support" 
+                    className={({ isActive }) => 
+                        isActive ? "text-white font-bold bg-green-700 rounded-lg px-3 py-2" : "text-white hover:text-yellow-300 transition-colors px-3 py-2"
+                    }
+                >
+                    Support
                 </NavLink>
             </li>
             {user && (
@@ -43,7 +73,7 @@ const Navbar = () => {
                     <NavLink 
                         to="/profile" 
                         className={({ isActive }) => 
-                            isActive ? "text-green-600 font-semibold" : "hover:text-green-600"
+                            isActive ? "text-white font-bold bg-green-700 rounded-lg px-3 py-2" : "text-white hover:text-yellow-300 transition-colors px-3 py-2"
                         }
                     >
                         My Profile
@@ -54,7 +84,8 @@ const Navbar = () => {
     );
 
     return (
-        <nav className="navbar bg-linear-to-r from-green-300 to-blue-500 shadow-md px-4 lg:px-8 sticky top-0 z-50">
+        <nav className="bg-linear-to-r from-green-400 to-blue-500 shadow-xl sticky top-0 z-50">
+        <div className="navbar container mx-auto px-4 lg:px-8 py-2">
             {/* Navbar Start - Mobile Dropdown + Logo */}
             <div className="navbar-start">
                 {/* Mobile Dropdown Menu */}
@@ -84,7 +115,7 @@ const Navbar = () => {
                 </div>
                 
                 {/* Logo */}
-                <Link to="/" className="btn btn-ghost text-xl lg:text-2xl font-bold text-green-600">
+                <Link to="/" className="btn btn-ghost text-xl lg:text-2xl font-bold text-white hover:text-yellow-300 transition-colors">
                     🌱 GreenNest
                 </Link>
             </div>
@@ -143,8 +174,8 @@ const Navbar = () => {
                             to="/login" 
                             className={({ isActive }) => 
                                 isActive 
-                                    ? "btn btn-sm lg:btn-md bg-green-600 text-white border-none" 
-                                    : "btn btn-ghost btn-sm lg:btn-md"
+                                    ? "btn btn-sm lg:btn-md bg-white text-green-700 border-none hover:bg-yellow-300" 
+                                    : "btn btn-sm lg:btn-md btn-ghost text-white hover:bg-white hover:text-green-700 border-2 border-white"
                             }
                         >
                             Login
@@ -153,8 +184,8 @@ const Navbar = () => {
                             to="/register" 
                             className={({ isActive }) => 
                                 isActive 
-                                    ? "btn btn-sm lg:btn-md bg-green-600 text-white border-none" 
-                                    : "btn btn-sm lg:btn-md bg-green-300 hover:bg-green-600 text-white border-none"
+                                    ? "btn btn-sm lg:btn-md bg-yellow-400 text-green-800 border-none hover:bg-yellow-500" 
+                                    : "btn btn-sm lg:btn-md bg-white text-green-700 hover:bg-yellow-400 hover:text-green-800 border-none"
                             }
                         >
                             Register
@@ -162,6 +193,7 @@ const Navbar = () => {
                     </>
                 )}
             </div>
+        </div>
         </nav>
     );
 };

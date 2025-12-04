@@ -12,6 +12,9 @@ import Plants from './pages/Plants.jsx';
 import Profile from './pages/Profile.jsx';
 import PlantDeatils from './pages/PlantDeatils.jsx';
 import NotFound from './pages/NotFound.jsx';
+import About from './pages/About.jsx';
+import Contact from './pages/Contact.jsx';
+import Support from './pages/Support.jsx';
 import AuthProvider from './providers/AuthProvider.jsx';
 import PrivateRoute from './routers/PrivateRoute.jsx';
 import { ToastContainer } from 'react-toastify';
@@ -30,6 +33,18 @@ const router = createBrowserRouter([
     {
       path:"/plants",
       Component:Plants
+    },
+    {
+      path:"/about",
+      Component:About
+    },
+    {
+      path:"/contact",
+      Component:Contact
+    },
+    {
+      path:"/support",
+      Component:Support
     },
     {
       path:"/plant/:id",
